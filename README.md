@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Dynamic element
 
-Added a dynamic feature for list of countries
+Added a dynamic feature for list of countries.
 Backend is developed using Python and flask framework
 
 
