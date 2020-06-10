@@ -1,0 +1,180 @@
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">
+    Let's Travel
+  </a>
+  <button class="navbar-toggler" type="button"  (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link" href="#search">Search</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#places">Places</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- Responsive navigation bar -->
+<div class="collapse navbar-collapse show"
+  [ngClass]="{ 'show': navbarOpen }" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#search">Search</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Places</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+</div>
+
+
+<!-- Slide show-->
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <img src="assets/images/taj_mahal.jpg" alt="Random first slide">
+      <div class="carousel-caption">
+        <h2>There are two kinds of people in the world. Those who have seen the Taj Mahal and love it and those who have not seen the Taj and love it.</h2>
+      </div>
+  </ng-template>
+    
+  <ng-template ngbSlide>
+    <img src="assets/images/resort2.jpg" alt="Random second slide">
+      <div class="carousel-caption">
+        <h2>Take your dream vacations</h2>
+      </div>
+  </ng-template>
+    
+    
+  <ng-template ngbSlide>
+    <img src="assets/images/image6.jpeg" alt="Random third slide">
+      <div class="carousel-caption">
+        <h2>The world is a book and those who do not travel read only one page...</h2>
+      </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="assets/images/romantic.jpg" alt="Random third slide">
+      <div class="carousel-caption">
+        <h2>Good company in a journey makes the way seem shorter...</h2>
+      </div>
+  </ng-template>
+    
+</ngb-carousel>    
+  
+
+
+<!-- Section: Serch  -->
+<section id="search" class="section section-search ">
+  <div class="container-fluid bg-primary text-white">
+    <div class="row">
+      <div class="container text-center">
+        <h2 style="margin-top:30px;">Search places</h2>
+        <div class="input-field">
+          <input type="text" placeholder="Maldives,Goa etc ." id="auto-input">
+        </div>
+      </div>
+    </div>
+   </div>
+</section>
+
+
+<!-- Dynamic-->
+<!-- FETCH THE LIST COUNTRIES FROM THE DATABASE -->
+<section  id="places">
+  <div class="container"> 
+    <h2 class="container text-center text-primary" style="margin-top:20px">Countries we offer</h2>
+      <div class="card-columns" >
+        <div class="card bg-primary text-white" *ngFor="let country of Countries" >
+          <div class="card-body text-center">
+            <h2 class="card-text">{{country}}</h2>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+    
+<!-- Popula Places -->
+<div class="container mt-2">
+  <h2 class="container text-center text-primary">Popular Places</h2>   
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6 item">
+        <div class="card item-card card-block">
+          <img class="card-img" src="assets/images/Goa.jpg" alt="Photo of sunset">
+          <h5 class="card-title  mt-3 mb-3">Goa</h5>
+          <p class="card-text">The Party Hub,Fantastic Beaches,Watersports</p> 
+        </div>
+      </div>    
+      
+      <div class="col-md-3 col-sm-6 item">
+        <div class="card item-card card-block">
+          <img class="card-img" src="assets/images/Maldives.jpg" alt="Photo of sunset">
+          <h5 class="card-title  mt-3 mb-3">Maldives</h5>
+          <p class="card-text">The blue ocean,white beaches,scuba diving,water-skiing.</p> 
+        </div>
+      </div>
+
+
+      <div class="col-md-3 col-sm-6 item">
+        <div class="card item-card card-block">
+          <img class="card-img" src="assets/images/redfort.jpg" alt="Photo of sunset">
+          <h5 class="card-title  mt-3 mb-3">Red Fort</h5>
+          <p class="card-text">Located in delhi served as the residence of the Mughal Emperors.</p> 
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item">
+        <div class="card item-card card-block">
+          <img class="card-img" src="assets/images/kerala.jpg" alt="Photo of sunset">
+          <h5 class="card-title  mt-3 mb-3">Kerala</h5>
+          <p class="card-text">Ecotourism initiatives,beautiful backwaters.</p> 
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<!--  Contact details -->
+<section id="contact" class="section section-search ">
+  <div class="container-fluid bg-primary text-white" style="margin-top:30px; min-height: 100px;">
+    <div class="row"> 
+      <div class="container text-center">
+        <h3 style="margin-top:20px;">Contact us</h3>
+          <div>
+            <h6>Address : Koramangala, Bengaluru, Karnataka 560034</h6> 
+          </div>
+      </div>
+    </div>        
+  </div>
+</section>
